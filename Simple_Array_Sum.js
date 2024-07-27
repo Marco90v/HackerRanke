@@ -59,7 +59,7 @@ function readLine() {
 
 function simpleArraySum(ar) {
     // Write your code here
-
+    return ar.reduce((p,v)=>p+v,0)
 }
 
 function main() {
