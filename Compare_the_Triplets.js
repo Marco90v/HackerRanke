@@ -32,7 +32,12 @@ function readLine() {
  */
 
 function compareTriplets(a, b) {
-
+    let t = [0,0]
+    a.forEach((v,i)=>{
+        if (v > b[i]) t[0]++
+        if (v < b[i]) t[1]++
+    })
+    return t
 }
 
 function main() {
