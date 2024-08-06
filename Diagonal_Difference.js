@@ -31,7 +31,12 @@ function readLine() {
 
 function diagonalDifference(arr) {
     // Write your code here
-
+    return arr.reduce((t,v,i)=>{
+        t[0] += v[i]
+        t[1] += v[arr.length - (i+1)]
+        if(i === arr.length-1) return Math.abs(t[0] - t[1])
+        return t
+    },[0,0])
 }
 
 function main() {
