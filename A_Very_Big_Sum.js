@@ -31,7 +31,7 @@ function readLine() {
 
 function aVeryBigSum(ar) {
     // Write your code here
-
+    return ar.reduce((t,v)=>t+v,0)
 }
 
 function main() {
