@@ -28,7 +28,18 @@ function readLine() {
 
 function staircase(n) {
     // Write your code here
-
+    const symbol = "#"
+    for (let i = 0; i < n; i++) {
+        let step = ""
+        for (let x = n; x > 0; x--) {
+            if (i >= x-1){
+                step+=symbol
+            }else{
+                step+=" "
+            }
+        }
+        console.log(step)
+    }
 }
 
 function main() {
