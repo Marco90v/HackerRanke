@@ -31,7 +31,21 @@ function readLine() {
 
 function timeConversion(s) {
     // Write your code here
-
+    const base = 12;
+    const format = s.slice(-2)
+    const h = s.slice(0,-2)
+    let d = h.split(":")
+    const H = Number(d[0])
+    if(format === "PM"){
+        if(H !== 12){
+            d[0] = (H + base).toString()
+        }
+    }else{
+        if(H === base){
+            d[0] = "00"
+        }
+    }
+    return d.join(":")
 }
 
 function main() {
