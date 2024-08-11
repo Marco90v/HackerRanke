@@ -31,7 +31,9 @@ function readLine() {
 
 function birthdayCakeCandles(candles) {
     // Write your code here
-
+    const r = Math.max(...candles);
+    const z = candles.reduce((t,v)=>(v===r?t+=1:t),0);
+    return z;
 }
 
 function main() {
