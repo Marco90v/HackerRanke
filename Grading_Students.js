@@ -31,7 +31,14 @@ function readLine() {
 
 function gradingStudents(grades) {
     // Write your code here
-
+    return grades.map(v=>{
+        if(v<37) return v
+        let nV = v
+        for (let i = 1; i < 3; i++) {
+            if ((v+i) % 5 === 0) nV = v+i
+        }
+        return nV
+    })
 }
 
 function main() {
