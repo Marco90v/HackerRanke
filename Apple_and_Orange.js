@@ -34,7 +34,10 @@ function readLine() {
 
 function countApplesAndOranges(s, t, a, b, apples, oranges) {
     // Write your code here
-
+    const tA = apples.map(v=>a+v).filter(v=>v>=s && v<=t).length
+    const tO = oranges.map(v=>b+v).filter(v=>v<=t && v>=s).length
+    console.log(tA)
+    console.log(tO)
 }
 
 function main() {
